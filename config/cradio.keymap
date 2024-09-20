@@ -73,13 +73,53 @@
             bindings = <&kp COMMA>;
             key-positions = <27 28>;
         };
+
+        atros {
+            bindings = <&kp APOSTROPHE>;
+            key-positions = <17 18>;
+        };
+
+        lbrack {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <5 6>;
+        };
+
+        rbrac {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <7 8>;
+        };
+
+        dassh {
+            bindings = <&kp MINUS>;
+            key-positions = <13 14>;
+        };
+
+        pup {
+            bindings = <&kp PAGE_UP>;
+            key-positions = <20 10>;
+        };
+
+        pdown {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <19 29>;
+        };
+
+        homesweet {
+            bindings = <&kp HOME>;
+            key-positions = <4 5>;
+        };
+
+        snipsnip {
+            bindings = <&new_macro>;
+            key-positions = <11 13>;
+        };
     };
 
     macros {
         new_macro: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings = <&kp LEFT_GUI &kp LEFT_SHIFT &kp S>;
             label = "NEW_MACRO";
         };
     };
@@ -92,7 +132,7 @@
 &kp Q  &kp W  &kp E  &kp R          &kp T        &kp Y      &kp U  &kp I           &kp O         &kp P
 &kp A  &kp S  &kp D  &kp F          &kp G        &kp H      &kp J  &kp K           &kp L         &kp TAB
 &kp Z  &kp X  &kp C  &kp V          &kp B        &kp N      &kp M  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LCTRL
-                     &kp BACKSPACE  &kp ENTER    &kp SPACE  &to 1
+                     &kp BACKSPACE  &kp SPACE    &kp ENTER  &to 1
             >;
         };
 
